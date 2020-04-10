@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-8">
+    <div class="alert alert-orange">
+      <strong>CONFIRM YOUR EMAIL ADDRESS EMILEESIMCHENKO@COMPANY.CO</strong>
+      <button type="button" class="close">x</button>
+    </div>
+
+
+    <div class="card">
+      <div class="card-body">
+        <h4>Completed Tasks</h4>
+        <div class="d-flex justify-content-between">
+          <div class="tasks-numbers">
+            372
+          </div>
+          <div>
+            s.,çlsmdçlçlsdçl
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="activy">
+          <h3>Activy</h3>
+
+          <div class="titulo">TODAY</div>
+
+          <ng-container *ngFor="let item of actives">
+            <div class="activy-item">
+              <div>
+                <div class="icon">
+                  <fa-icon [icon]="faCheck"></fa-icon>
+                </div>
+              </div>
+              <div class="info">
+                <div>
+                  <span [innerHtml]="item.title"></span>
+                </div>
+
+                <div class="hour">{{ item.hour }}</div>
+                <div class="images">
+                  <ng-container *ngFor="let img of item.images">
+                    <img [src]="img.path" />
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="App">
+  <header class="App-header">
+    <div class="box">
+      <div class="boxLogo">
+        <img src="/assets/logo_cinza.png" alt="Projectus" />
+      </div>
+
+      <div class="boxInput">
+        <form [formGroup]="form" (ngSubmit)="handleAuthLogin($event)">
+          <div class="form-group text-left">
+            <label htmlFor="email">E-mail</label>
+            <input type="email" name="email" id="email" class="form-control" value="" formControlName="email" />
+          </div>
+          <div class="form-group text-left">
+            <label htmlFor="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" formControlName="password" />
+          </div>
+
+          <div class="form-group">
+            <div class="msg error" *ngIf="errorCode">
+              <p>{{ message }}</p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-1">
+            <button type="submit" class="google-account mr-2" [disabled]="form.invalid">Sign Up</button>
+            <a href="/register" class="google-account ml-2">Register</a>
+          </div>
+
+          <div>
+            <a href="/forgot" class="forgot">Esqueci minha senha</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+</div>

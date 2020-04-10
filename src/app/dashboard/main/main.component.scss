@@ -1,0 +1,71 @@
+.alert {
+  background-color: #fff1e2;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  &.alert-orange {
+    font-size: 14px;
+    color: #ed6400;
+  }
+}
+
+.tasks-numbers {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.activy {
+  h3 {
+    color: #131313;
+  }
+  .titulo {
+    color: #898989;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .activy-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding: 5px;
+    cursor: pointer;
+    &:hover {
+      background: rgb(234, 234, 234, 0.7);
+    }
+    .icon {
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      background-color: #cef9c6;
+      color: #131313;
+      border-radius: 50%;
+    }
+    .info {
+      font-size: 12px;
+      flex-direction: column;
+      display: flex;
+      margin-left: 10px;
+      font-weight: bold;
+      .hour {
+        color: #898989;
+        font-size: 10px;
+        font-weight: bold;
+      }
+      .images {
+        text-align: center;
+        img {
+          margin: 10px 10px 0px 0px;
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}

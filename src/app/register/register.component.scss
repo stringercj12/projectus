@@ -1,0 +1,87 @@
+@import "./../../styles/global.scss";
+
+.box {
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+
+  .boxLogo {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  p,
+  label {
+    color: $cinzaEscuro;
+  }
+
+  .boxInput {
+    .google-account {
+      background-color: $green;
+      padding: 15px;
+      border-radius: 30px;
+      border: none;
+      width: 190px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      opacity: 0.8;
+      margin-bottom: 20px;
+
+      &:hover {
+        opacity: 1;
+        background-color: #46ee6d;
+        color: #fafafa;
+      }
+    }
+
+    .upload {
+      position: relative;
+
+      .text {
+        color: #918a8a;
+        font-size: 14px;
+        text-transform: none;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+      }
+
+      .input {
+        visibility: hidden;
+      }
+    }
+
+    hr {
+      margin-bottom: 15px;
+    }
+
+    /* padding: 10px 0 10px 0; */
+    width: 100%;
+
+    .form-control {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #fcfcfc;
+      /* max-width: 100%; */
+      width: 100%;
+      /* display: flex; */
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .forgot {
+    font-size: 14px;
+    color: #918a8a;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      color: #46ee6d;
+    }
+  }
+}

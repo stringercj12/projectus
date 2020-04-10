@@ -1,0 +1,127 @@
+@import "./../../../styles/global.scss";
+
+.icon {
+  color: #6d6d6c;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.fs-18 {
+  font-size: 18px !important;
+}
+
+.logo-search {
+  padding: 10px;
+}
+
+.user-perfil {
+  // height: 80px;
+  background-color: #202020;
+  padding: 10px;
+
+  .image {
+    // background-image: url("https://a.disquscdn.com/1581704280/images/noavatar92.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: block;
+    width: 55px;
+    height: 55px;
+    min-width: 55px !important;
+    min-height: 55px !important;
+
+    &:hover {
+      border: 3px solid #ffc200;
+    }
+  }
+
+  .title {
+    color: #f9f9f9;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .function {
+    font-size: 16px;
+    color: #ccc;
+    font-weight: bold;
+  }
+
+  .bt {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #f9f9f0;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+.tasks {
+  padding: 10px;
+  color: #f9f9f9;
+
+  .completed-tasks {
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+
+    .number {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}
+
+.menu {
+  padding: 10px;
+  color: #f9f9f9;
+
+  .title {
+    color: #ccc;
+    padding: 10px 0;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      color: #f9f9f9;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: bold;
+      height: 36px;
+      padding: 5px 10px;
+      // justify-content: center;
+      align-items: center;
+      display: flex;
+      cursor: pointer;
+
+      &.active,
+      &:focus,
+      &:active,
+      &:hover {
+        background-color: #202020;
+        border-left: 2px solid #ffc200;
+      }
+
+      .notif {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: #ffc200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #282c34;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
