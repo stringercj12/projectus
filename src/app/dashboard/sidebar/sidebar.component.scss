@@ -22,6 +22,9 @@
   // height: 80px;
   background-color: #202020;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   .image {
     // background-image: url("https://a.disquscdn.com/1581704280/images/noavatar92.png");
@@ -43,11 +46,15 @@
   .title {
     color: #f9f9f9;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
+    cursor: pointer;
+    &:hover {
+      border-bottom: 1px dotted #fafafa;
+    }
   }
 
   .function {
-    font-size: 16px;
+    font-size: 15px;
     color: #ccc;
     font-weight: bold;
   }
@@ -85,6 +92,7 @@
   .title {
     color: #ccc;
     padding: 10px 0;
+    text-transform: uppercase;
   }
 
   ul {
@@ -100,6 +108,7 @@
       // justify-content: center;
       align-items: center;
       display: flex;
+      width: 100%;
       cursor: pointer;
 
       &.active,
@@ -121,6 +130,21 @@
         color: #282c34;
         font-size: 12px;
         margin-left: 10px;
+      }
+
+      .teams-image{
+        img {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          margin: 0 5px;
+          
+          &:focus,
+          &:active,
+          &:hover{
+            border: 2px dotted #ffc200;
+          }
+        }
       }
     }
   }

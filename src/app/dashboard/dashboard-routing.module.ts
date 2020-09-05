@@ -1,12 +1,15 @@
-import { DashboardComponent } from './dashboard.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard.component';
 
 
 const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
+    data: {
+      form: 'teste'
+    },
     children: [
       {
         path: '',
@@ -15,7 +18,10 @@ const routes: Routes = [
       },
       {
         path: 'main',
-        loadChildren: () => import('./main/main.module').then(m => m.MainModule)
+        loadChildren: () => import('./main/main.module').then(m => m.MainModule),
+        data: {
+          form: 'teste'
+        }
       },
       {
         path: 'tasks',
@@ -24,6 +30,10 @@ const routes: Routes = [
       {
         path: 'notifications',
         loadChildren: () => import('./notifications/notifications.module').then(m => m.NotificationsModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
       }
     ]
   }

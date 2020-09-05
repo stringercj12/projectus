@@ -1,3 +1,4 @@
+// @import "../../../styles/global.scss";
 .alert {
   background-color: #fff1e2;
   padding: 10px;
@@ -8,6 +9,59 @@
   &.alert-orange {
     font-size: 14px;
     color: #ed6400;
+  }
+}
+
+.today-tasks {
+  .titulo {
+    margin-bottom: 20px;
+    button {
+      background-color: #cef9c6;
+      padding: 5px 15px;
+      border-radius: 50px;
+      color: #282c34;
+      outline: none;
+      border: none;
+      opacity: 1;
+      &:hover {
+        background-color: #99e58b;
+      }
+    }
+  }
+
+  .tasks {
+    display: flex;
+    align-items: center;
+    background-color: #f7f6f3;
+    border: 1px solid #f7f6f3;
+    border-radius: 10px;
+    height: 112px;
+    margin-top: 20px;
+
+    .taks-status {
+      margin: auto 20px auto 15px;
+      input {
+        width: 30px;
+        height: 30px;
+        background-color: #ffffff;
+        cursor: pointer;
+      }
+    }
+
+    .task-title {
+      color: #131313;
+      font-weight: bold;
+      // margin-bottom: 10px;
+      .taks-user {
+        img {
+          width: 20px;
+          height: 20px;
+          object-fit: cover;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
+    }
   }
 }
 

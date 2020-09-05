@@ -1,4 +1,4 @@
-<div class="nav-header">
+<div class="nav-header mb-3">
   <div class="sub-header">
     <div class="title">
       <h2 class="mr-1">{{ title }}</h2>
@@ -7,16 +7,22 @@
       </button>
     </div>
     <div class="buttons">
-      <button type="button" class="btn btn-green">+Add</button>
+      <button type="button" class="btn btn-green">+ Adicionar</button>
     </div>
   </div>
   <div class="tabs">
-    <ul class="d-flex">
+    <ng-template></ng-template>
+    <ul *ngIf="mainRoute">
       <li>Profile</li>
       <li>Notifications</li>
       <li>Account</li>
       <li>Apps</li>
     </ul>
-    <ng-container></ng-container>
+    <ul *ngIf="profileRoute">
+      <li routerLink="profile" routerLinkActive="active">Profile</li>
+      <li>Notifications</li>
+      <li>Account</li>
+      <li>Apps</li>
+    </ul>
   </div>
 </div>

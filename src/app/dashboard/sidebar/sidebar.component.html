@@ -1,7 +1,8 @@
 <div class="logo-search d-flex justify-content-between align-items-center">
   <div>
-    <a class="btn btn-link" href="/dashboard">
-      <img src="/assets/Logo.png" alt="Logo Projectus" />
+    <a class="btn btn-link fs-18 text-light" href="/dashboard">
+      <!-- <img src="/assets/Logo.png" alt="Logo Projectus" /> -->
+      myTaskList
     </a>
   </div>
   <div>
@@ -9,20 +10,25 @@
   </div>
 </div>
 <div class="user-perfil">
-  <div class="d-flex justify-content-between align-items-center">
-    <div>
-      <img class="image" [src]="avatarImg" alt="" />
-    </div>
-    <div class="align-items-center d-flex justify-content-around">
-      <div class="mx-3">
-        <div class="title">Emilee Simchenko</div>
-        <div class="function">Product Owner</div>
-      </div>
-      <div>
-        <button type="button" class="bt fs-18">
-          <fa-icon [icon]="faEllipsisH"></fa-icon>
-        </button>
-      </div>
+  <div>
+    <img class="image" [src]="(!avatarImg || (avatarImg != '')) ? avatarImg : 'assets/Logo.png'" alt="" />
+  </div>
+
+  <div>
+    <div class="title" routerLink="profile">Emilee Simchenko</div>
+    <div class="function">Product Owner</div>
+  </div>
+
+  <div>
+    <button type="button" class="bt fs-18" (click)="dropdown = !dropdown">
+      <fa-icon [icon]="faEllipsisH"></fa-icon>
+    </button>
+
+
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
     </div>
   </div>
 </div>
@@ -42,56 +48,72 @@
 
 
 <div class="menu">
-  <h5 class="title">MENU</h5>
+
+  <h5 class="title">{{menu.title}}</h5>
   <ul>
-    <li routerLink="../dashboard" routerLinkActive="active">
+    <li [routerLink]="item.path" [routerLinkActive]="item.classActive" *ngFor="let item of menu.subMenu">
       <div class="d-flex justify-content-between">
-        Home
+        <span>{{item.name}}</span>
+        <div class="notif" *ngIf="item.icon">3</div>
       </div>
     </li>
-    <li routerLink="tasks" routerLinkActive="active">
-      <div class="d-flex justify-content-between">
-        My Tasks
-      </div>
+
+  </ul>
+
+  <h5 class="title">{{projetos?.title}}</h5>
+
+  <ul>
+    <li [routerLink]="item.path" class="d-flex justify-content-between align-items-center"
+      *ngFor="let item of projetos.subMenu">
+      <span *ngIf="item.icon">
+        <img [src]="item.icon" alt="">
+      </span>
+      <span>{{item.name}}</span>
     </li>
-    <li routerLink="notifications" routerLinkActive="active">
-      <div class="d-flex justify-content-between">
-        <div>
-          Notifications
-        </div>
-        <div class="notif">3</div>
+
+    <li routerLink="project-new" class="text-yellow">
+      <div class="d-flex justify-content-between text-yellow">
+        + Adicionar um projeto
       </div>
     </li>
   </ul>
 
-  <h5 class="title">PROJECTUS</h5>
+  <h5 class="title">Equipe</h5>
   <ul>
-    <li>
-      <div class="d-flex justify-content-between">
-        Dashboard UI Kit
+    <li class="d-flex justify-content-between">
+      <div>
+        Designers
+      </div>
+      <div class="teams-image">
+        <img src="assets/teams1.png" alt="" ngbTooltip="Titi">
+        <img src="assets/teams2.png" alt="" ngbTooltip="Srº Bills">
+        <img src="assets/teams3.png" alt="" ngbTooltip="Srº Wis">
       </div>
     </li>
-    <li>
-      <div class="d-flex justify-content-between">
-        CRM System
+    <li class="d-flex justify-content-between">
+      <div>
+        Backend
+      </div>
+      <div class="teams-image">
+        <img src="assets/teams4.png" alt="" ngbTooltip="Goten">
+        <img src="assets/teams5.png" alt="" ngbTooltip="Trunks">
       </div>
     </li>
-    <li>
-      <div class="d-flex justify-content-between">
-        Website Redesign
-        <div>
-          <fa-icon [icon]="faEllipsisH"></fa-icon>
-        </div>
+    <li class="d-flex justify-content-between">
+      <div>
+        Frontend
       </div>
-    </li>
-    <li>
-      <div class="d-flex justify-content-between">
-        Communication Tool
+      <div class="teams-image">
+        <span>+ 10</span>
+        <img src="https://jcfsoft.com/images/Image.png" alt="" ngbTooltip="Curirin Ferreira">
+        <img src="https://jcfsoft.com/images/Image.png" alt="" ngbTooltip="Gohan Ferreira">
+        <img src="https://jcfsoft.com/images/Image.png" alt="" ngbTooltip="Buma Ferreira">
+        <img src="https://jcfsoft.com/images/Image.png" alt="" ngbTooltip="Goku Ferreira">
       </div>
     </li>
     <li routerLink="project-new" class="text-yellow">
       <div class="d-flex justify-content-between text-yellow">
-        + Add a Project
+        + Adicionar uma equipe
       </div>
     </li>
   </ul>

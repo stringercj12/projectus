@@ -1,8 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "styles/global.scss";
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
 
 
+.badge-developement {
+  background-color: #fff1e2;
+  color: #ed6400;
+}
 
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+.badge-design {
+  background-color: #E3EFFF;
+  color: #1975D0;
+}
 
-@import '../src/styles/global.scss';
+.badge-marketing {
+  background-color: #f5f0ff;
+  color: #764ced;
+}

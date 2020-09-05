@@ -52,8 +52,8 @@
     border: 1px solid $redError;
   }
   &.success {
-    color: $green !important;
-    border: 1px solid $green;
+    color: $lightGreen !important;
+    border: 1px solid $lightGreen;
   }
   &.warning {
     color: $red !important;
@@ -89,7 +89,7 @@ code {
 }
 
 .btn {
-  // background-color: $green;
+  // background-color: $lightGreen;
   padding: 15px;
   border-radius: 30px;
   border: none;
@@ -115,7 +115,7 @@ code {
   }
 }
 .btn-green {
-  background-color: $green;
+  background-color: $lightGreen;
 }
 
 .App {
@@ -188,4 +188,23 @@ form {
 
 .text-yellow {
   color: #ffc200;
+}
+
+.nav-header {
+  padding: 20px;
+  background-color: #fff;
+  // grid-area: header;
+}
+
+.nav {
+  .nav-pills {
+    .nav-item {
+      .nav-link {
+        color: #202020;
+        background-color: transparent;
+        border-bottom: 2px solid #ffc200;
+        border-radius: 0;
+      }
+    }
+  }
 }

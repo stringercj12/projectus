@@ -32,23 +32,23 @@ export class MainComponent implements OnInit {
       hour: '6:02 PM',
       images: [
         {
-          path: 'https://jcfsoft.com/Image.png'
+          path: 'https://jcfsoft.com/images/Image.png'
         },
 
         {
-          path: 'https://jcfsoft.com/Image.png'
+          path: 'https://jcfsoft.com/images/Image.png'
         },
 
         {
-          path: 'https://jcfsoft.com/Image.png'
+          path: 'https://jcfsoft.com/images/Image.png'
         },
 
         {
-          path: 'https://jcfsoft.com/Image.png'
+          path: 'https://jcfsoft.com/images/Image.png'
         },
 
         {
-          path: 'https://jcfsoft.com/Image.png'
+          path: 'https://jcfsoft.com/images/Image.png'
         }
       ]
     },

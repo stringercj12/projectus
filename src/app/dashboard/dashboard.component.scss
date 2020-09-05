@@ -3,9 +3,10 @@
 .dashboard {
   display: grid;
   grid-template-columns: 300px 1fr;
-  grid-template-rows: 100px 1fr;
+  // grid-template-rows: 100px 1fr;
   grid-template-areas:
-    "sidebar header"
+    // "sidebar header"
+
     "sidebar main";
   height: 100%;
 
@@ -27,7 +28,7 @@
 
   .main {
     background-color: #ccc;
-    padding: 20px;
+    padding: 0px;
     grid-area: main;
     overflow: auto;
   }
