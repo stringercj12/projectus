@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="box">
+    <div class="box-image">
+      <img src="https://jcfsoft.com/images/select-icon-1.jpg" alt="">
+      <span class="btn-foto">
+        Mudar
+      </span>
+    </div>
+    <form action="" (ngSubmit)="updateProfile($event)">
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" class="form-control" id="name">
+      </div>
+
+      <div class="form-group">
+        <label for="role">Função</label>
+        <input type="text" class="form-control" id="role">
+      </div>
+
+      <div class="form-group">
+        <label for="teams">
+          Equipe
+          <i class="icon-interrogation" ngbTooltip="Informe o nome do time e pressione enter">?</i>
+        </label>
+        <input type="text" class="form-control" id="teams">
+      </div>
+
+      <div class="form-group">
+        <label for="about">Sobre</label>
+        <textarea class="form-control" id="about"></textarea>
+      </div>
+
+      <div class="box-btn-profile">
+        <button type="submit" class="btn-profile">Atualizar perfil</button>
+      </div>
+
+    </form>
+  </div>
+</div>

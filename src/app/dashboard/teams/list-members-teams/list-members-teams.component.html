@@ -1,0 +1,126 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-12">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Members 32</h3>
+
+          <div class="fix-scroll">
+
+            <div class="member" (click)="openStaff(item)" [ngClass]="{'active': teamsId == item, '': teamsId != item}"
+              *ngFor="let item of items">
+              <div class="member-info">
+                <div class="member-image">
+                  <img
+                    src="https://ava.unicarioca.edu.br/graduacao/pluginfile.php/400075/user/icon/graduacao/f2?rev=6430968"
+                    alt="">
+                </div>
+                <div class="member-details">
+                  <div class="member-name">
+                    Conan Matusov
+                  </div>
+                  <div class="member-role">
+                    Team Lead
+                  </div>
+                </div>
+              </div>
+              <div class="member-total-task">
+                829
+                <span>TASKS</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7 col-12">
+      <div class="card">
+        <div class="card-body">
+
+          <div class="teams-member-details">
+            <div class="teams-member-profile">
+              <div class="">
+                <div class="teams-member-image">
+                  <img
+                    src="https://ava.unicarioca.edu.br/graduacao/pluginfile.php/400075/user/icon/graduacao/f2?rev=6430968"
+                    alt="">
+                </div>
+
+                <div class="teams-member-description">
+                  <div class="teams-member-name">
+                    Davea Butler
+                  </div>
+                  <div class="teams-member-role">
+                    UX Researcher
+                  </div>
+                  <div class="teams-member-locale">
+                    London, United Kingdom
+                  </div>
+                </div>
+              </div>
+
+              <div class="buttons">
+                <span>...</span>
+              </div>
+
+            </div>
+
+            <hr>
+
+            <div class="teams-member-statistic">
+              <div class="teams-member-tasks-closed">
+                729
+                <small>Closed Tasks</small>
+              </div>
+              <div class="teams-member-tasks-open">
+                13
+                <small>open tasks</small>
+              </div>
+            </div>
+
+            <hr>
+
+            <div class="teams-member-assigned">
+              <h6>Assigned Tasks <strong>2</strong></h6>
+              <div class="tasks">
+                <div class="taks-status">
+                  <input type="checkbox" />
+                </div>
+                <div class="task-title">
+                  <h5>E-mail after registration so that i can confirm my address</h5>
+                  <div class="taks-user">
+                    <img src="assets/teams1.png" alt="">
+                    <span class="badge badge-developement">Developement</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tasks">
+                <div class="taks-status">
+                  <input type="checkbox" />
+                </div>
+                <div class="task-title">
+                  <h5>E-mail after registration so that i can confirm my address</h5>
+                  <div class="taks-user">
+                    <img src="assets/teams1.png" alt="">
+                    <span class="badge badge-developement">Developement</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr>
+
+            <div class="teams-member-active">
+              <h6>Last Activity</h6>
+            </div>
+          </div>
+          detalhes aqui
+          {{
+            teamsId
+          }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

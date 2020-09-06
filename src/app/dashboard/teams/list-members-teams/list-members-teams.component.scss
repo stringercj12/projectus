@@ -1,0 +1,166 @@
+.member {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 385px;
+  height: 88px;
+  background-color: #f7f6f3;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px auto;
+  cursor: pointer;
+
+  &.active,
+  &:active,
+  &:hover {
+    background-color: #fff8dd;
+  }
+
+  .member-info {
+    display: flex;
+    .member-image {
+      width: 48px;
+      height: 48px;
+      margin-right: 10px;
+      overflow: hidden;
+      border-radius: 50%;
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .member-details {
+      flex-direction: column;
+      display: flex;
+      .member-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #131313;
+      }
+      .member-role {
+        font-size: 14px;
+        font-weight: bold;
+        color: #575656;
+      }
+    }
+  }
+  .member-total-task {
+    flex-direction: column;
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    span {
+      font-size: 14px;
+      color: #575656;
+    }
+  }
+}
+
+.teams-member-details {
+  display: flex;
+  flex-direction: column;
+
+  h6 {
+    color: #131313;
+    font-weight: bold;
+    strong {
+      color: #595959;
+    }
+  }
+
+  .teams-member-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > div {
+      display: flex;
+      align-items: center;
+      .teams-member-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-right: 10px;
+        overflow: hidden;
+        img {
+          background-size: cover;
+          width: 100%;
+        }
+      }
+
+      .teams-member-description {
+        display: flex;
+        flex-direction: column;
+        .teams-member-name {
+          font-size: 18px;
+          font-weight: bold;
+          color: #131313;
+        }
+        .teams-member-role {
+          font-size: 14px;
+          font-weight: bold;
+          color: #131313;
+        }
+        .teams-member-locale {
+          font-size: 12px;
+          font-weight: lighter;
+          color: #131313;
+        }
+      }
+    }
+    .buttons {
+      width: 30px;
+      height: 30px;
+      background-color: #eaeaea;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .tasks {
+    display: flex;
+    align-items: center;
+    background-color: #f7f6f3;
+    border: 1px solid #f7f6f3;
+    border-radius: 10px;
+    height: 112px;
+    margin-top: 20px;
+
+    .taks-status {
+      margin: auto 20px auto 15px;
+      input {
+        width: 20px;
+        height: 20px;
+        background-color: #ffffff;
+        cursor: pointer;
+      }
+    }
+
+    .task-title {
+      color: #131313;
+      font-weight: bold;
+      // margin-bottom: 10px;
+      .taks-user {
+        img {
+          width: 20px;
+          height: 20px;
+          object-fit: cover;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.fix-scroll {
+  height: 560px;
+  overflow: hidden;
+  overflow-y: auto;
+  .card-title{
+    position: sticky;
+  }
+}
