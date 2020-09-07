@@ -1,4 +1,10 @@
-<app-header title="Configurações de perfil" [profileRoute]="true">
+<app-header title="Configurações de perfil">
+  <ul class="profile-tabs" role="tabs">
+    <li class="profile-tabs-item" routerLink="form-profile" routerLinkActive="active">Profile</li>
+    <li class="profile-tabs-item" routerLink="settings-notifications" routerLinkActive="active">Notifications</li>
+    <li class="profile-tabs-item" routerLink="settings-account" routerLinkActive="active">Account</li>
+    <li class="profile-tabs-item" routerLink="settings-apps" routerLinkActive="active">Apps</li>
+  </ul>
 </app-header>
 
 <router-outlet></router-outlet>

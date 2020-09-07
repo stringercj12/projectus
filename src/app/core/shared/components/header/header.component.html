@@ -1,4 +1,4 @@
-<div class="nav-header mb-3">
+<div class="header mb-3">
   <div class="sub-header">
     <div class="title">
       <h2 class="mr-1">{{ title }}</h2>
@@ -7,22 +7,10 @@
       </button>
     </div>
     <div class="buttons">
-      <button type="button" class="btn btn-green">+ Adicionar</button>
+      <ng-content select="[role=buttons]"></ng-content>
     </div>
   </div>
-  <div class="tabs">
-    <ng-template></ng-template>
-    <ul *ngIf="mainRoute">
-      <li>Profile</li>
-      <li>Notifications</li>
-      <li>Account</li>
-      <li>Apps</li>
-    </ul>
-    <ul *ngIf="profileRoute">
-      <li routerLink="profile" routerLinkActive="active">Profile</li>
-      <li routerLink="profile-notifications" routerLinkActive="active">Notifications</li>
-      <li>Account</li>
-      <li>Apps</li>
-    </ul>
+  <div class="menu">
+    <ng-content select="[role=tabs]"></ng-content>
   </div>
 </div>

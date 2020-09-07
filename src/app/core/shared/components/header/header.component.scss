@@ -1,9 +1,15 @@
 @import "../../../../../styles/global.scss";
 
-.nav-header {
+.header {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  background-color: #fff;
+  padding: 15px 15px 0px 20px;
+  height: 110px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 
   .sub-header {
     display: flex;
@@ -33,42 +39,47 @@
     }
 
     .buttons {
-      button {
-        background-color: $lightGreen;
-        padding: 5px 15px;
-        border-radius: 50px;
-        color: $cinzaEscuro;
-        outline: none;
-        border: none;
-        opacity: 1;
-        &:hover {
-          background-color: #99e58b;
+      ::ng-deep {
+        button {
+          background-color: $lightGreen;
+          padding: 5px 15px;
+          border-radius: 50px;
+          color: $cinzaEscuro;
+          outline: none;
+          border: none;
+          opacity: 1;
+          &:hover {
+            background-color: #99e58b;
+          }
         }
       }
     }
   }
-}
+  .menu {
+    ::ng-deep {
+      .profile-tabs {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        .profile-tabs-item {
+          margin: 0px 15px;
+          color: #1b1b1b;
+          font-size: 18px;
+          font-family: Heebo, sans-serif;
+          cursor: pointer;
+          border-bottom: 2px solid #fff;
+          &:first-child {
+            margin-left: 0;
+          }
 
-.tabs {
-  ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    li {
-      margin: 15px 15px 0 15px;
-      color: #1b1b1b;
-      font-size: 18px;
-      font-family: Heebo, sans-serif;
-      cursor: pointer;
-      &:first-child{
-        margin-left: 0;
-      }
-
-      &:hover,
-      &:active,
-      &.active,
-      &:focus{
-        border-bottom: 2px solid #ffc200;
+          &:hover,
+          &:active,
+          &.active,
+          &:focus {
+            border-bottom: 2px solid #ffc200;
+          }
+        }
       }
     }
   }
