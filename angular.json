@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "projectus:build"
+            "buildTarget": "projectus:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "projectus:build:production"
+              "buildTarget": "projectus:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "projectus:build"
+            "buildTarget": "projectus:build"
           }
         },
         "test": {
