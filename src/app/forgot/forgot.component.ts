@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-forgot',
@@ -9,8 +9,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class ForgotComponent implements OnInit {
 
-  form = new FormGroup({
-    email: new FormControl('', [Validators.required])
+  form = new UntypedFormGroup({
+    email: new UntypedFormControl('', [Validators.required])
   });
   constructor(private auth: AuthService) { }
 
